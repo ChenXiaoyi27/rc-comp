@@ -13,6 +13,11 @@ export default class Hello extends React.Component {
                         <p>用div写的可展开收缩的树形结构，解决ie8下使用antd Tree组件，数据量较大情况下卡顿、崩溃的问题。</p>
                     </Card>
                 </Col>
+                <Col span={8}>
+                    <Card size="small" title="事项日历-MatterCalendar" extra={<a href="#/matterCalendar">查看Demo</a>} className="card">
+                        <p>手写日历，可标记事项。</p>
+                    </Card>
+                </Col>
             </Row>
             <h5 className="mt20">工具</h5><hr />
             <Row>

@@ -2,7 +2,7 @@
   "name": "rc-comp",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://chenxiaoyi27.gitee.io/rc-comp",
+  "homepage": ".",
   "dependencies": {
     "@babel/core": "7.7.4",
     "@svgr/webpack": "4.3.3",
