@@ -1,5 +1,5 @@
-import './reset.css';
-import './global.less';
+import './assets/reset.css';
+import './assets/global.less';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Switch, Route } from 'react-router-dom';
