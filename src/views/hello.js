@@ -15,7 +15,7 @@ export default class Hello extends React.Component {
                 </Col>
                 <Col span={8}>
                     <Card size="small" title="事项日历-MatterCalendar" extra={<a href="#/matterCalendar">查看Demo</a>} className="card">
-                        <p>手写日历，可标记事项。</p>
+                        <p>基于antd Button，Table等组件的手写日历，可显示事项。</p>
                     </Card>
                 </Col>
             </Row>
