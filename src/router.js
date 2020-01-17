@@ -19,5 +19,10 @@ module.exports = [
         component: require('./views/demo/date2CN').Date2CN,
         name: 'date2CN',
         dm: 'date2CN',
+    }, {
+        path: '/matterCalendar',
+        component: require('./views/demo/matterCalendar').MatterCalendarDemo,
+        name: 'matterCalendar',
+        dm: 'matterCalendar',
     }
 ];
