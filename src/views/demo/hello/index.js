@@ -52,7 +52,7 @@ export default class Hello extends React.Component {
                 <Col span={4}>
                     <div className="timeline">
                         <Timeline>
-                            {mockData.reverse().map((item) => {
+                            {Object.assign([], mockData).reverse().map((item) => {
                                 return <Timeline.Item key={item.router}>
                                     <a href={item.router} className="ft-12">{item.title}</a><br />
                                     <span className="co-gray">添加于 {item.date}</span>
