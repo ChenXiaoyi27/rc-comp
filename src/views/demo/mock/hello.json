@@ -1,0 +1,32 @@
+[
+  {
+    "type": "components",
+    "title": "简单树-SimpleTree",
+    "router": "#/simpletree",
+    "intro": "用div写的可展开收缩的树形结构，解决ie8下使用antd Tree组件，数据量较大情况下卡顿、崩溃的问题。"
+  },
+  {
+    "type": "components",
+    "title": "事项日历-MatterCalendar",
+    "router": "#/matterCalendar",
+    "intro": "基于antd Button，Table等组件的手写日历，可显示事项。"
+  },
+  {
+    "type": "utils",
+    "title": "日期转中文-date2CN",
+    "router": "#/date2CN",
+    "intro": "工具类date2CN.js，提供一个方法，用于将8位日期字符串转成中文。"
+  },
+  {
+    "type": "others",
+    "title": "antd中使用iconfont",
+    "router": "#/useIconfont",
+    "intro": "antd Icon使用iconfont中项目图标的demo。"
+  },
+  {
+    "type": "components",
+    "title": "字数文本域-TextareaNum",
+    "router": "#/textareaNum",
+    "intro": "显示当前输入字符数的文本域，输入到最大值时不能再输入并提示最多字数。"
+  }
+]

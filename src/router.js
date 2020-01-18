@@ -1,7 +1,7 @@
 module.exports = [
     {
         path: '/',
-        component: require('./views/hello').Hello,
+        component: require('./views/demo/hello').Hello,
         name: 'hello',
         dm: 'hello',
     }, {
@@ -24,5 +24,10 @@ module.exports = [
         component: require('./views/demo/matterCalendar').MatterCalendarDemo,
         name: 'matterCalendar',
         dm: 'matterCalendar',
+    }, {
+        path: '/textareaNum',
+        component: require('./views/demo/textareaNum').TextareaNumDemo,
+        name: 'textareaNum',
+        dm: 'textareaNum',
     }
 ];

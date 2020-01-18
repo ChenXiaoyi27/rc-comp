@@ -3,7 +3,7 @@ import React from 'react';
 import { Row, Col, Button, Tooltip, Message, Table } from 'antd';
 const WEEK = ['日', '一', '二', '三', '四', '五', '六'];
 
-export default class MatterCalendar extends React.Component {
+class MatterCalendar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -140,4 +140,4 @@ export default class MatterCalendar extends React.Component {
         </div>
     }
 }
-export { MatterCalendar };
+export default MatterCalendar;
