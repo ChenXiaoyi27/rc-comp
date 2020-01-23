@@ -29,5 +29,10 @@ module.exports = [
         component: require('./views/demo/textareaNum').TextareaNumDemo,
         name: 'textareaNum',
         dm: 'textareaNum',
+    }, {
+        path: '/calendarSelect',
+        component: require('./views/demo/calendarSelect').CalendarSelectDemo,
+        name: 'calendarSelect',
+        dm: 'calendarSelect',
     }
 ];

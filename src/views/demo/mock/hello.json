@@ -33,5 +33,12 @@
     "router": "#/textareaNum",
     "intro": "显示当前输入字符数的文本域，输入到最大值时不能再输入并提示最多字数。",
     "date": "2020-01-18"
+  },
+  {
+    "type": "components",
+    "title": "日期选择器-CalendarSelect",
+    "router": "#/calendarSelect",
+    "intro": "显示为日历，标记‘今天’，可选择一天，自定义选择事件。",
+    "date": "2020-01-23"
   }
 ]
