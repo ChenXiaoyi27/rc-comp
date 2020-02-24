@@ -34,5 +34,10 @@ module.exports = [
         component: require('./views/demo/calendarSelect').CalendarSelectDemo,
         name: 'calendarSelect',
         dm: 'calendarSelect',
+    }, {
+        path: '/inputSelect',
+        component: require('./views/demo/inputSelect').InputSelectDemo,
+        name: 'inputSelect',
+        dm: 'inputSelect'
     }
 ];
