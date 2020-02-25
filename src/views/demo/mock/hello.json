@@ -40,5 +40,12 @@
     "router": "#/calendarSelect",
     "intro": "显示为日历，标记‘今天’，可选择一天，自定义选择事件。",
     "date": "2020-01-23"
+  },
+  {
+    "type": "components",
+    "title": "输入下拉框-InputSelect",
+    "router": "#/inputSelect",
+    "intro": "支持手动输入的单选下拉框，适合antd版本较低，不支持此功能的情况。",
+    "date": "2020-02-25"
   }
 ]
