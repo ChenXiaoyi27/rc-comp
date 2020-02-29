@@ -107,7 +107,7 @@ export default class PrintTable extends React.Component {
             <div className="A4">
                 <div className="A4body">
                     <p className="txt-c h3">标题</p>
-                    {tableData.length < printSize ?
+                    {!isPrint || tableData.length < printSize ?
                         <div className="printOneTable">
                             {/* 替换table */}
                             <table className="A4-table mga txt-c">

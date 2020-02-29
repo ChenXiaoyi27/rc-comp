@@ -5,7 +5,7 @@ module.exports = (dateStr) => {
     let chinese = ['〇', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
     let numStr = dateStr.replace(/[^0-9]+/g, '');
     let year = chinese[numStr[0]] + chinese[numStr[1]] + chinese[numStr[2]] + chinese[numStr[3]];
-    let month = numStr[4] === '0' ? chinese[numStr[5]] : chinese[10] + chinese[numStr[5]];
+    let month = numStr[4] === '0' ? chinese[numStr[5]] : (numStr[5] === '0' ? chinese[10] : chinese[10] + chinese[numStr[5]]);
     let day = '';
     if (numStr[6] === '0') {
         day = chinese[numStr[7]];
