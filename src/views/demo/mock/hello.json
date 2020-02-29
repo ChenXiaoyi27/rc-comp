@@ -47,5 +47,26 @@
     "router": "#/inputSelect",
     "intro": "支持手动输入的单选下拉框，适合antd版本较低，不支持此功能的情况。",
     "date": "2020-02-25"
+  },
+  {
+    "type": "others",
+    "title": "A4打印样式-printA4",
+    "router": "#/printA4",
+    "intro": "A4打印样式，打印时去掉页眉页脚，兼容ie。",
+    "date": "2020-02-29"
+  },
+  {
+    "type": "others",
+    "title": "A4表格分页打印样式-printA4Table",
+    "router": "#/printA4Table",
+    "intro": "A4打印表格数据，分页样式正常，打印时去掉页眉页脚，兼容ie。",
+    "date": "2020-02-29"
+  },
+  {
+    "type": "utils",
+    "title": "浏览器信息-browser",
+    "router": "#/browser",
+    "intro": "工具类browser.js，提供方法，判断当前浏览器是否为ie，查询浏览器版本信息。",
+    "date": "2020-02-29"
   }
 ]

@@ -39,5 +39,20 @@ module.exports = [
         component: require('./views/demo/inputSelect').InputSelectDemo,
         name: 'inputSelect',
         dm: 'inputSelect'
+    }, {
+        path: '/printA4',
+        component: require('./views/demo/printA4').PrintA4Demo,
+        name: 'printA4',
+        dm: 'printA4'
+    }, {
+        path: '/printA4Table',
+        component: require('./views/demo/printA4Table').PrintA4TableDemo,
+        name: 'printA4Table',
+        dm: 'printA4Table'
+    }, {
+        path: '/browser',
+        component: require('./views/demo/browser').BrowserDemo,
+        name: 'browser',
+        dm: 'browser'
     }
 ];

@@ -1,3 +1,5 @@
+import 'react-app-polyfill/ie11';
+import 'react-app-polyfill/stable';
 import './assets/reset.css';
 import './assets/global.less';
 import React from 'react';

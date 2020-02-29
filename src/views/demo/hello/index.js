@@ -17,6 +17,11 @@ export default class Hello extends React.Component {
             this.state[item.type].push(item);
             return false;
         });
+        this.setState({
+            components: this.state.components,
+            utils: this.state.utils,
+            others: this.state.others
+        });
     }
     render() {
         let { components, utils, others } = this.state;

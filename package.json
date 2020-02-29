@@ -152,5 +152,8 @@
         }
       ]
     ]
+  },
+  "devDependencies": {
+    "react-app-polyfill": "^1.0.6"
   }
 }

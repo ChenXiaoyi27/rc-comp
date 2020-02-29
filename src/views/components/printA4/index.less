@@ -1,0 +1,45 @@
+.printA4 {
+  @page {
+    margin: 0;
+  }
+  .A4 {
+    width: 210mm;
+    padding: 25mm 19.1mm;
+    min-height: 297mm;
+    font-family: "SimSun", "Times New Roman";
+  }
+  .A4body {
+    width: 100%;
+    min-height: 247mm;
+    position: relative;
+  }
+  .pos-bottom {
+    position: absolute;
+    bottom: 0;
+  }
+  .border {
+    border: 1px solid #eee;
+  }
+  .A4-table {
+    tr {
+      border: 1px solid #eee;
+      line-height: 36px;
+      height: 36px;
+    }
+    th,
+    td {
+      width: 200px;
+    }
+  }
+  .printTable {
+    height: 272mm;
+    padding: 0 19.1mm;
+    @page {
+      margin: 0;
+    }
+  }
+  .printOneTable {
+    height: 197mm;
+    padding: 0 19.1mm;
+  }
+}
