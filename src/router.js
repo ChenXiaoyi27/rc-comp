@@ -54,5 +54,10 @@ module.exports = [
         component: require('./views/demo/browser').BrowserDemo,
         name: 'browser',
         dm: 'browser'
+    }, {
+        path: '/exTable',
+        component: require('./views/demo/exTable').ExTableDemo,
+        name: 'exTable',
+        dm: 'exTable'
     }
 ];

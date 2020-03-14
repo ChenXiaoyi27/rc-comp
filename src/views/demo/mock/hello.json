@@ -68,5 +68,12 @@
     "router": "#/browser",
     "intro": "工具类browser.js，提供方法，判断当前浏览器是否为ie，查询浏览器版本信息。",
     "date": "2020-02-29"
+  },
+  {
+    "type": "components",
+    "title": "扩展表格-ExTable",
+    "router": "#/exTable",
+    "intro": "基于antd低版本扩展的表格，扩展了onRow方法、二级表头。",
+    "date": "2020-03-14"
   }
 ]
