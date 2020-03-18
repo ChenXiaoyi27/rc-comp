@@ -59,5 +59,10 @@ module.exports = [
         component: require('./views/demo/exTable').ExTableDemo,
         name: 'exTable',
         dm: 'exTable'
+    }, {
+        path: '/treeSelect',
+        component: require('./views/demo/treeSelect').TreeSelectDemo,
+        name: 'treeSelect',
+        dm: 'treeSelect'
     }
 ];

@@ -75,5 +75,12 @@
     "router": "#/exTable",
     "intro": "基于antd低版本扩展的表格，扩展了onRow方法、二级表头。",
     "date": "2020-03-14"
+  },
+  {
+    "type": "components",
+    "title": "树选择器-TreeSelect",
+    "router": "#/treeSelect",
+    "intro": "基于antd-Icon、Checkbox的树选择器，支持单选和多选，适用于ie8数据量大的情况。",
+    "date": "2020-03-18"
   }
 ]
