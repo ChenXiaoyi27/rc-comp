@@ -1,5 +1,4 @@
 import React from 'react';
-import { Modal, Button } from 'antd';
 import TreeSelect from '../components/tree-select';
 
 export default class TreeSelectDemo extends React.Component {
@@ -28,12 +27,8 @@ export default class TreeSelectDemo extends React.Component {
                         }
                     ]
                 }
-            ],
-            visible: false,
-            msg: ''
+            ]
         };
-    }
-    componentWillMount() {
     }
     onTreeSelect(item) {//单选
         console.log('单选', item);
@@ -41,24 +36,14 @@ export default class TreeSelectDemo extends React.Component {
     onTreeChecked(keys, rows) {//多选
         console.log('多选', keys, rows);
     }
-    onCancel() {
-        this.setState({ visible: false });
-        this.refs.ieTree.clearData();
-    }
     render() {
-        let { visible, data } = this.state;
-        return <div>
-            <Button onClick={() => this.setState({ visible: true })}>打开</Button>
-            <Modal visible={visible} footer={null} title=""
-                onCancel={() => this.onCancel()}
-            >
-                <Button onClick={() => this.setState({ msg: '111' })}>修改state</Button>
-                <TreeSelect tree={data} itemProp={{ key: 'dm', value: 'mc' }}
-                    multiple ref="ieTree"
-                    onSelect={(item) => this.onTreeSelect(item)}
-                    onCheck={(keys, rows) => this.onTreeChecked(keys, rows)}
-                />
-            </Modal>
+        let { data } = this.state;
+        return <div style={{ padding: 20 }}>
+            <TreeSelect tree={data} itemProp={{ key: 'dm', value: 'mc' }}
+                multiple ref="ieTree"
+                onSelect={(item) => this.onTreeSelect(item)}
+                onCheck={(keys, rows) => this.onTreeChecked(keys, rows)}
+            />
         </div>
     }
 }
