@@ -70,64 +70,60 @@ class TreeSelect extends React.Component {
         this.props.onCheck && this.props.onCheck(keys, rows);
     }
     checkOn(item, root) {//勾选
-        let { data } = this.state;
-        if (item.children && item.children.length > 0) {//子项递归处理
+        if (item.children && item.children.length > 0) {//递归处理子项
             item.children.map((child, index) => { this.checkOn(child, `${root},${index}`) });
         }
+        this.loopAdd(item, root);//递归处理父项
+    }
+    loopAdd(item, root) {//递归勾选
         if (!item.checked) {
-            this.addItem(item);//添加当前项
+            //添加当前项
+            let { keys, rows, data } = this.state, { itemProp } = this.props;
+            keys.push(item[itemProp.key]);
+            rows.push(Object.assign(item, { index: rows.length }));
+            item.checked = true;
             //添加父项
             let arr = root.split(',');
             if (arr.length > 2) {
                 arr.pop();
-                let parentRoot = arr.join(','), parent = this.findNodeByRoot(parentRoot, data);
-                if (parent.children && parent.children.length > 0) {
-                    let { children } = parent, i = 0;
-                    for (; i < children.length; i++) {
-                        if (!children[i].checked) {
-                            break;
-                        }
+                let parentRoot = arr.join(','), parent = this.findNodeByRoot(parentRoot, data),
+                    { children } = parent, i = 0;
+                for (; i < children.length; i++) {
+                    if (!children[i].checked) {
+                        break;
                     }
-                    if (i === children.length) {//判断是否父项的所有子项都已勾选
-                        this.addItem(parent);
-                    }
+                }
+                if (i === children.length) {//判断是否父项的所有子项都已勾选
+                    this.loopAdd(parent, parentRoot);
                 }
             }
         }
     }
-    addItem(item) {//勾选某一项的操作
-        let { keys, rows } = this.state, { itemProp } = this.props;
-        keys.push(item[itemProp.key]);
-        rows.push(Object.assign(item, { index: rows.length }));
-        item.checked = true;
-    }
     checkOff(item, root) {//取消勾选
-        let { data } = this.state;
-        if (item.children && item.children.length > 0) {//子项递归处理
+        if (item.children && item.children.length > 0) {//递归处理子项
             item.children.map((child, index) => this.checkOff(child, `${root},${index}`));
         }
+        this.loopDelete(item, root);//递归处理父项
+    }
+    loopDelete(item, root) {//递归删除
         if (item.checked) {
-            this.deleteItem(item);//删除当前项
+            //删除当前项
+            let { keys, rows, data } = this.state;
+            keys.splice(item.index, 1);
+            rows.splice(item.index, 1);
+            Object.assign(item, { index: null });
+            rows.map((row, i) => {
+                row.index = i;
+            });
+            item.checked = false;
             //删除父项
             let arr = root.split(',');
             if (arr.length > 2) {
                 arr.pop();
                 let parentRoot = arr.join(','), parent = this.findNodeByRoot(parentRoot, data);
-                if (parent.checked) {
-                    this.deleteItem(parent);
-                }
+                this.loopDelete(parent, parentRoot);
             }
         }
-    }
-    deleteItem(item) {//取消勾选某一项的操作
-        let { keys, rows } = this.state;
-        keys.splice(item.index, 1);
-        rows.splice(item.index, 1);
-        Object.assign(item, { index: null });
-        rows.map((row, i) => {
-            row.index = i;
-        });
-        item.checked = false;
     }
     renderNode(arr, i, parentIndex) {
         let { current } = this.state, { itemProp, multiple } = this.props, { key, value } = itemProp;
