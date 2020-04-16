@@ -82,5 +82,12 @@
     "router": "#/treeSelect",
     "intro": "基于antd-Icon、Checkbox的树选择器，支持单选和多选，适用于ie8数据量大的情况。",
     "date": "2020-03-18"
+  },
+  {
+    "type": "others",
+    "title": "图片懒加载-lazyLoad",
+    "router": "#/lazyLoad",
+    "intro": "获取图片列表数据，监听父容器scroll事件，循环检测图片是否未加载且在可视区内，是则加载图片。",
+    "date": "2020-04-16"
   }
 ]

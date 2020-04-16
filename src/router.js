@@ -64,5 +64,10 @@ module.exports = [
         component: require('./views/demo/treeSelect').TreeSelectDemo,
         name: 'treeSelect',
         dm: 'treeSelect'
+    }, {
+        path: '/lazyLoad',
+        component: require('./views/demo/lazyLoad').LazyLoadDemo,
+        name: 'lazyLoad',
+        dm: 'lazyLoad'
     }
 ];
