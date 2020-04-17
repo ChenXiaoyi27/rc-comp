@@ -27,8 +27,6 @@ export default class LazyLoadDemo extends React.Component {
             img.src = this.loadingSrc;
         });
         this.setState({ images });
-    }
-    componentDidMount() {
         window.onload = () => {
             this.start();
         }
