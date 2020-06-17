@@ -69,5 +69,10 @@ module.exports = [
         component: require('./views/demo/lazyLoad').LazyLoadDemo,
         name: 'lazyLoad',
         dm: 'lazyLoad'
+    }, {
+        path: '/toggleModal',
+        component: require('./views/demo/toggleModal').ToggleModalDemo,
+        name: 'toggleModal',
+        dm: 'toggleModal'
     }
 ];

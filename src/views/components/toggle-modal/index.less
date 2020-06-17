@@ -1,0 +1,60 @@
+.toggleModal {
+  .toggleModal-wrap {
+    width: 583px;
+    height: 400px;
+    position: fixed;
+    right: 30px;
+    border: 1px solid #eee;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 0 7px #aaa;
+    background: #fff;
+    .toggleModal-header {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .fr-icon {
+      float: right;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px;
+    }
+  }
+  .tm-open {
+    animation: tmopenframe 0.5s ease forwards;
+  }
+
+  .tm-close {
+    animation: tmcloseframe 0.5s ease forwards;
+  }
+  @keyframes tmcloseframe {
+    0% {
+      bottom: 0;
+    }
+
+    85% {
+      bottom: -400px;
+    }
+
+    100% {
+      bottom: -360px;
+    }
+  }
+
+  @keyframes tmopenframe {
+    0% {
+      bottom: -360px;
+    }
+
+    15% {
+      bottom: -400px;
+    }
+
+    100% {
+      bottom: 0;
+    }
+  }
+}

@@ -89,5 +89,12 @@
     "router": "#/lazyLoad",
     "intro": "获取图片列表数据，监听父容器scroll事件，循环检测图片是否未加载且在可视区内，是则加载图片。",
     "date": "2020-04-16"
+  },
+  {
+    "type": "components",
+    "title": "缩放弹窗-toggleModal",
+    "router": "#/toggleModal",
+    "intro": "该弹窗起初不可见，第一次可见时展开，可最小化缩在右下角，可最大化展开，点击关闭按钮则不可见。",
+    "date": "2020-06-17"
   }
 ]
