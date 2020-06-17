@@ -71,7 +71,10 @@ class TreeSelect extends React.Component {
     }
     checkOn(item, root) {//勾选
         if (item.children && item.children.length > 0) {//递归处理子项
-            item.children.map((child, index) => { this.checkOn(child, `${root},${index}`) });
+            item.children.map((child, index) => {
+                this.checkOn(child, `${root},${index}`);
+                return child;
+            });
         }
         this.loopAdd(item, root);//递归处理父项
     }
@@ -114,6 +117,7 @@ class TreeSelect extends React.Component {
             Object.assign(item, { index: null });
             rows.map((row, i) => {
                 row.index = i;
+                return row;
             });
             item.checked = false;
             //删除父项

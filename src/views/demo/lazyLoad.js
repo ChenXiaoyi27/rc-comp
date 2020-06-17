@@ -25,6 +25,7 @@ export default class LazyLoadDemo extends React.Component {
         let { images } = this.state;
         images.map((img) => {
             img.src = this.loadingSrc;
+            return img;
         });
         this.setState({ images });
         window.onload = () => {
@@ -44,6 +45,7 @@ export default class LazyLoadDemo extends React.Component {
             if (this.isShow(img.id) && img.src === this.loadingSrc) {
                 img.src = img.realSrc;
             }
+            return img;
         });
         this.setState({ images });
     }

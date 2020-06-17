@@ -62,6 +62,7 @@ export default class ExTable extends React.Component {
                                         return parent.children.map((child) =>
                                             <th key={child.dataIndex} style={{ width: child.width }}>{child.title}</th>);
                                     }
+                                    return parent;
                                 })}
                             </tr>}
                         </thead>
