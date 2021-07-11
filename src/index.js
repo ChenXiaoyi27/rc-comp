@@ -1,18 +1,17 @@
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
-import './assets/reset.css';
-import './assets/global.less';
+// import 'antd/dist/antd.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { HashRouter, Switch, Route } from 'react-router-dom';
-import routes from './router';
+import ReactDom from 'react-dom';
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
+import App from './app.js';
 
-const App = () => (
-    <HashRouter>
-        <Switch>
-            {routes.map(route => <Route exact path={route.path} component={route.component} key={route.dm} />)}
-        </Switch>
-    </HashRouter>
+moment.locale('zh-cn');
+
+ReactDom.render(
+    <ConfigProvider locale={zhCN}>
+        <App />
+    </ConfigProvider>,
+    document.getElementById('root')
 );
-
-ReactDOM.render(<App style={{ minWidth: "800px" }} />, document.getElementById('root'));

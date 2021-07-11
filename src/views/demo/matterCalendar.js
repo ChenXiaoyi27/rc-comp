@@ -1,6 +1,6 @@
 import React from 'react';
 import MatterCalendar from '../components/matter-calendar';
-import mockData from './mock/matters';
+import mockData from './mock/matters.json';
 
 export default class MatterCalendarDemo extends React.Component {
     constructor(props) {

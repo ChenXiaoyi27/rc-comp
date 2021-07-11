@@ -1,78 +1,83 @@
 module.exports = [
     {
         path: '/',
-        component: require('./views/demo/hello').Hello,
+        component: require('../views/demo/hello').Hello,
         name: 'hello',
         dm: 'hello',
     }, {
         path: '/simpleTree',
-        component: require('./views/demo/simpleTree').SimpleTreeDemo,
+        component: require('../views/demo/simpleTree').SimpleTreeDemo,
         name: 'simpleTree',
         dm: 'simpleTree',
     }, {
         path: '/useIconfont',
-        component: require('./views/demo/useIconfont').UseIconfont,
+        component: require('../views/demo/useIconfont').UseIconfont,
         name: 'useIconfont',
         dm: 'useIconfont',
     }, {
         path: '/date2CN',
-        component: require('./views/demo/date2CN').Date2CN,
+        component: require('../views/demo/date2CN').Date2CN,
         name: 'date2CN',
         dm: 'date2CN',
     }, {
         path: '/matterCalendar',
-        component: require('./views/demo/matterCalendar').MatterCalendarDemo,
+        component: require('../views/demo/matterCalendar').MatterCalendarDemo,
         name: 'matterCalendar',
         dm: 'matterCalendar',
     }, {
         path: '/textareaNum',
-        component: require('./views/demo/textareaNum').TextareaNumDemo,
+        component: require('../views/demo/textareaNum').TextareaNumDemo,
         name: 'textareaNum',
         dm: 'textareaNum',
     }, {
         path: '/calendarSelect',
-        component: require('./views/demo/calendarSelect').CalendarSelectDemo,
+        component: require('../views/demo/calendarSelect').CalendarSelectDemo,
         name: 'calendarSelect',
         dm: 'calendarSelect',
     }, {
         path: '/inputSelect',
-        component: require('./views/demo/inputSelect').InputSelectDemo,
+        component: require('../views/demo/inputSelect').InputSelectDemo,
         name: 'inputSelect',
         dm: 'inputSelect'
     }, {
         path: '/printA4',
-        component: require('./views/demo/printA4').PrintA4Demo,
+        component: require('../views/demo/printA4').PrintA4Demo,
         name: 'printA4',
         dm: 'printA4'
     }, {
         path: '/printA4Table',
-        component: require('./views/demo/printA4Table').PrintA4TableDemo,
+        component: require('../views/demo/printA4Table').PrintA4TableDemo,
         name: 'printA4Table',
         dm: 'printA4Table'
     }, {
         path: '/browser',
-        component: require('./views/demo/browser').BrowserDemo,
+        component: require('../views/demo/browser').BrowserDemo,
         name: 'browser',
         dm: 'browser'
     }, {
         path: '/exTable',
-        component: require('./views/demo/exTable').ExTableDemo,
+        component: require('../views/demo/exTable').ExTableDemo,
         name: 'exTable',
         dm: 'exTable'
     }, {
         path: '/treeSelect',
-        component: require('./views/demo/treeSelect').TreeSelectDemo,
+        component: require('../views/demo/treeSelect').TreeSelectDemo,
         name: 'treeSelect',
         dm: 'treeSelect'
     }, {
         path: '/lazyLoad',
-        component: require('./views/demo/lazyLoad').LazyLoadDemo,
+        component: require('../views/demo/lazyLoad').LazyLoadDemo,
         name: 'lazyLoad',
         dm: 'lazyLoad'
     }, {
         path: '/toggleModal',
-        component: require('./views/demo/toggleModal').ToggleModalDemo,
+        component: require('../views/demo/toggleModal').ToggleModalDemo,
         name: 'toggleModal',
         dm: 'toggleModal'
+    }, {
+        path: '/drawerLayout',
+        component: require('../views/demo/drawerLayout').DrawerLayoutDemo,
+        name: 'drawerLayout',
+        dm: 'drawerLayout'
     }
 ];
