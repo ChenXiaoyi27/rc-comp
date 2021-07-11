@@ -15,11 +15,6 @@ module.exports = [
         name: 'useIconfont',
         dm: 'useIconfont',
     }, {
-        path: '/date2CN',
-        component: require('../views/demo/date2CN').Date2CN,
-        name: 'date2CN',
-        dm: 'date2CN',
-    }, {
         path: '/matterCalendar',
         component: require('../views/demo/matterCalendar').MatterCalendarDemo,
         name: 'matterCalendar',
@@ -79,5 +74,30 @@ module.exports = [
         component: require('../views/demo/drawerLayout').DrawerLayoutDemo,
         name: 'drawerLayout',
         dm: 'drawerLayout'
+    }, {
+        path: '/drag',
+        component: require('../views/demo/drag').DragDemo,
+        name: 'drag',
+        dm: 'drag'
+    }, {
+        path: '/handleEvents',
+        component: require('../views/demo/handleEvents').HandleEventsDemo,
+        name: 'handleEvents',
+        dm: 'handleEvents'
+    }, {
+        path: '/handleNumber',
+        component: require('../views/demo/handleNumber').HandleNumberDemo,
+        name: 'handleNumber',
+        dm: 'handleNumber'
+    }, {
+        path: '/handleReg',
+        component: require('../views/demo/handleReg').HandleRegDemo,
+        name: 'handleReg',
+        dm: 'handleReg'
+    }, {
+        path: '/handleDate',
+        component: require('../views/demo/handleDate').HandleDateDemo,
+        name: 'handleDate',
+        dm: 'handleDate'
     }
 ];

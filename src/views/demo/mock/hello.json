@@ -14,13 +14,6 @@
         "date": "2020-01-17"
     },
     {
-        "type": "utils",
-        "title": "日期转中文-date2CN",
-        "router": "#/date2CN",
-        "intro": "工具类date2CN.js，提供一个方法，用于将8位日期字符串转成中文。",
-        "date": "2020-01-17"
-    },
-    {
         "type": "others",
         "title": "antd中使用iconfont",
         "router": "#/useIconfont",
@@ -102,6 +95,41 @@
         "title": "抽屉布局-drawerLayout",
         "router": "#/drawerLayout",
         "intro": "左侧抽屉可展开收起。",
+        "date": "2021-07-11"
+    },
+    {
+        "type": "components",
+        "title": "拖拽组件-drag",
+        "router": "#/drag",
+        "intro": "拖拽容器组件，提供可拖和可放两个容器。",
+        "date": "2021-07-11"
+    },
+    {
+        "type": "utils",
+        "title": "事件监听-handleEvents",
+        "router": "#/handleEvents",
+        "intro": "工具类handleEvent.js，兼容ie8，包括addEvent监听事件、removeEvent移除事件、fireEvent触发事件。",
+        "date": "2021-07-11"
+    },
+    {
+        "type": "utils",
+        "title": "数字处理-handleNumber",
+        "router": "#/handleNumber",
+        "intro": "工具类handleNumber.js，包括toThousands将数字转为每三位加逗号的字符串、toFixed四舍五入保留小数位数、toPercentage数字转百分数（处理精度问题）。",
+        "date": "2021-07-11"
+    },
+    {
+        "type": "utils",
+        "title": "正则处理-handleReg",
+        "router": "#/handleReg",
+        "intro": "工具类handleReg.js，包括checkSpecial检查是否有特殊字符、calcStrLength计算字符串长度（一个中文字符按3个字符计算）。",
+        "date": "2021-07-11"
+    },
+    {
+        "type": "utils",
+        "title": "日期处理-handleDate",
+        "router": "#/handleDate",
+        "intro": "工具类handleDate.js，包括date2CN日期字符串转中文日期、getYesterday获取昨天Date对象、isLeapYear是否为闰年、isLessThanOneYear判断一个日期范围是否不超过一年。",
         "date": "2021-07-11"
     }
 ]
