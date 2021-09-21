@@ -99,5 +99,20 @@ module.exports = [
         component: require('../views/demo/handleDate').HandleDateDemo,
         name: 'handleDate',
         dm: 'handleDate'
+    }, {
+        path: '/sortButton',
+        component: require('../views/demo/sortButton').SortButtonDemo,
+        name: 'sortButton',
+        dm: 'sortButton'
+    }, {
+        path: '/rangePicker',
+        component: require('../views/demo/rangePicker').RangePickerDemo,
+        name: 'rangePicker',
+        dm: 'rangePicker'
+    }, {
+        path: '/dateRange',
+        component: require('../views/demo/dateRange').DateRangeDemo,
+        name: 'dateRange',
+        dm: 'dateRange'
     }
 ];

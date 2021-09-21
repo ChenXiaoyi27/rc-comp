@@ -131,5 +131,26 @@
         "router": "#/handleDate",
         "intro": "工具类handleDate.js，包括date2CN日期字符串转中文日期、getYesterday获取昨天Date对象、isLeapYear是否为闰年、isLessThanOneYear判断一个日期范围是否不超过一年。",
         "date": "2021-07-11"
+    },
+    {
+        "type": "components",
+        "title": "排序图标按钮组件-sortButton",
+        "router": "#/sortButton",
+        "intro": "排序图标按钮，抛出升序、降序方法。",
+        "date": "2021-09-19"
+    },
+    {
+        "type": "components",
+        "title": "日期范围组件-rangePicker",
+        "router": "#/rangePicker",
+        "intro": "由两个日期选择器组成的日期范围组件。",
+        "date": "2021-09-20"
+    },
+    {
+        "type": "components",
+        "title": "日期范围组件2-dateRage",
+        "router": "#/dateRange",
+        "intro": "仿百度的日期范围组件，可选一天内、一周内等，或自定义日期范围。",
+        "date": "2021-09-21"
     }
 ]
