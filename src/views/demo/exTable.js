@@ -19,13 +19,13 @@ export default class ExTableDemo extends React.Component {
             }
         };
         this.columns = [
-            { title: '姓名', dataIndex: 'xm', width: 90 },
-            { title: '学号', dataIndex: 'xh' },
+            { title: '姓名', dataIndex: 'xm', className: 'txt-c' },
+            { title: '学号', dataIndex: 'xh', className: 'txt-c' },
             {
                 title: '成绩', dataIndex: 'cj', children: [
-                    { title: '语文', dataIndex: 'Chinese', width: 90 },
-                    { title: '数学', dataIndex: 'maths', width: 90 },
-                    { title: '英语', dataIndex: 'English', width: 90 }
+                    { title: '语文', dataIndex: 'Chinese', className: 'txt-c' },
+                    { title: '数学', dataIndex: 'maths', className: 'txt-c' },
+                    { title: '英语', dataIndex: 'English', className: 'txt-c' }
                 ]
             }
         ];

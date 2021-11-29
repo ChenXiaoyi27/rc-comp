@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 // const SpeedMeasurePlugin=require("speed-measure-webpack-plugin");
 // const smp=new SpeedMeasurePlugin();
@@ -67,7 +68,7 @@ const prodConfig = {
                         },
                     },
                     {
-                        loader:'babel-loader',
+                        loader: 'babel-loader',
                         options: {
                             presets: ['@babel/preset-env']
                         }
@@ -150,25 +151,30 @@ const prodConfig = {
         new HtmlWebpackExternalsPlugin({
             externals: [
                 {
-                    module:'react',
+                    module: 'react',
                     entry: 'https://cdn.bootcdn.net/ajax/libs/react/17.0.1/umd/react.production.min.js',
-                    global:'React',
+                    global: 'React',
                     type: 'js'
                 },
                 {
-                    module:'react-dom',
+                    module: 'react-dom',
                     entry: 'https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.1/umd/react-dom.production.min.js',
-                    global:'ReactDOM',
+                    global: 'ReactDOM',
                     type: 'js'
                 },
                 {
-                    module:'antd',
-                    entry:'https://cdn.bootcdn.net/ajax/libs/antd/4.4.1/antd.min.js',
-                    global:'antd',
+                    module: 'antd',
+                    entry: 'https://cdn.bootcdn.net/ajax/libs/antd/4.4.1/antd.min.js',
+                    global: 'antd',
                     type: 'js'
                 }
             ]
         }),
+        new CopyPlugin([{
+            from: path.resolve(__dirname, '../static'),
+            to: '',
+            globOptions: { ignore: ['.*'] }
+        }]),
     ]
 };
 

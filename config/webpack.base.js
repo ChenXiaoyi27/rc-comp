@@ -4,7 +4,6 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 
 const alias = require('./alias');
 
@@ -114,10 +113,5 @@ module.exports = {
             template: path.resolve(__dirname, '../src/index.html')
         }),
         new FriendlyErrorsWebpackPlugin(),
-        new CopyPlugin([{
-            from: path.resolve(__dirname, '../static'),
-            to: '',
-            globOptions: { ignore: ['.*'] }
-        }]),
     ]
 };

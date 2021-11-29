@@ -1,6 +1,7 @@
 import './index.less';
 import React from 'react';
-import { Checkbox, Pagination, Icon } from 'antd';
+import { Checkbox, Pagination } from 'antd';
+import { FrownOutlined } from '@ant-design/icons'
 
 export default class ExTable extends React.Component {
     constructor(props) {
@@ -28,7 +29,7 @@ export default class ExTable extends React.Component {
         let child = col.render
             ? col.render(record[col.dataIndex], record, index)
             : record[col.dataIndex];
-        return <td key={trKey + colIndex}>{child}</td>;
+        return <td key={trKey + colIndex} className={col.className || ''}>{child}</td>;
     }
     isChecked(value) {//表格勾选
         let { selectedRowKeys } = this.props.rowSelection, flag = false;
@@ -40,7 +41,8 @@ export default class ExTable extends React.Component {
         return flag;
     }
     render() {
-        let { columns, dataSource, rowKey, pagination, onRow, rowSelection } = this.props, { defaultRowSpan } = this.state;
+        let { columns, dataSource, rowKey, pagination, onRow, rowSelection } = this.props;
+        let { defaultRowSpan } = this.state;
         return <div className="exTable">
             <div className="ant-table ant-table-bordered">
                 <div className="ant-table-body">
@@ -62,7 +64,6 @@ export default class ExTable extends React.Component {
                                         return parent.children.map((child) =>
                                             <th key={child.dataIndex} style={{ width: child.width }}>{child.title}</th>);
                                     }
-                                    return parent;
                                 })}
                             </tr>}
                         </thead>
@@ -106,7 +107,7 @@ export default class ExTable extends React.Component {
                     </table>
                     {dataSource.length === 0 &&
                         <div className="txt-c" style={{ borderBottom: '1px solid #e9e9e9', height: '100px', lineHeight: '100px', fontSize: '12px', color: '#999' }}>
-                            <Icon type="frown" />
+                            <FrownOutlined />
                             <sapn style={{ paddingLeft: '4px' }}>暂无数据</sapn>
                         </div>
                     }
