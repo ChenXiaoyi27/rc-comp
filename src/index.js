@@ -1,4 +1,5 @@
 // import 'antd/dist/antd.css';
+import './assets/global.less';
 import React from 'react';
 import ReactDom from 'react-dom';
 import { ConfigProvider } from 'antd';
