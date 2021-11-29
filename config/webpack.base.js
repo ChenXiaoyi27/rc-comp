@@ -4,6 +4,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const alias = require('./alias');
 
@@ -25,7 +26,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [
                     {
-                        loader:'babel-loader',
+                        loader: 'babel-loader',
                         options: {
                             presets: ['@babel/preset-env']
                         }
@@ -112,6 +113,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/index.html')
         }),
-        new FriendlyErrorsWebpackPlugin()
+        new FriendlyErrorsWebpackPlugin(),
+        new CopyPlugin([{
+            from: path.resolve(__dirname, '../static'),
+            to: '',
+            globOptions: { ignore: ['.*'] }
+        }]),
     ]
 };

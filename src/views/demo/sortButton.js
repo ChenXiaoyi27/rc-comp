@@ -12,7 +12,7 @@ export default class SortButtonDemo extends Component {
     render() {
         return (
             <div style={{ padding: '100px' }}>
-                <SortButton onToggle={this.handleToggle} noCancel />
+                <SortButton onToggle={this.handleToggle} noCancel={false} />
             </div>
         );
     }
