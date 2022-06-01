@@ -114,5 +114,10 @@ module.exports = [
         component: require('../views/demo/dateRange').DateRangeDemo,
         name: 'dateRange',
         dm: 'dateRange'
+    }, {
+        path: '/mousePosition',
+        component: require('../views/demo/mousePosition').MousePositionDemo,
+        name: 'mousePosition',
+        dm: 'mousePosition'
     }
 ];

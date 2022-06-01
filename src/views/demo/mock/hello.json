@@ -152,5 +152,12 @@
         "router": "#/dateRange",
         "intro": "仿百度的日期范围组件，可选一天内、一周内等，或自定义日期范围。",
         "date": "2021-09-21"
+    },
+    {
+        "type": "others",
+        "title": "textarea的光标位置处插入文字",
+        "router": "#/mousePosition",
+        "intro": "使用onSelect事件的event.target.selectionStart属性获取光标位置。",
+        "date": "2022-06-01"
     }
 ]
