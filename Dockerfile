@@ -1,5 +1,5 @@
 # node版本号
-FROM node:16.17.0
+FROM node:15-alpine
 # 工作目录
 WORKDIR /rc-comp
 # 添加所有文件到create-react-app目录
