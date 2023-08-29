@@ -1,6 +1,6 @@
 # dokcerfile
 # build stage
-FROM node:lts as build-stage
+FROM node:12.6.0-alpine as build-stage
 # 将工作区设为app与其他系统文件隔离
 WORKDIR /app
 COPY package*.json ./
@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 # production stage 
-FROM nginx:alpine as production-stage
+FROM nginx:stable-alpine as production-stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 # 容器对外暴露端口号
 EXPOSE 80
