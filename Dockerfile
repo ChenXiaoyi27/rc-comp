@@ -1,6 +1,6 @@
 # dokcerfile
 # build stage
-FROM node:lts-alpine as build-stage
+FROM node:14-alpine as build-stage
 # 将工作区设为app与其他系统文件隔离
 WORKDIR /app
 COPY package*.json ./
