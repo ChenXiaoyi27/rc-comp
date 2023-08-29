@@ -15,4 +15,4 @@ FROM nginx:stable-alpine as production-stage
 COPY --from=build-stage /app/dist /usr/share/nginx/html
 # 容器对外暴露端口号
 EXPOSE 80
-CMD ["nginx","-g","Daemon off;"]
+CMD ["nginx","-g","daemon off;"]
