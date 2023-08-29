@@ -1,12 +1,18 @@
-# node版本号
-FROM node:15-alpine
-# 工作目录
-WORKDIR /rc-comp
-# 添加所有文件到create-react-app目录
-ADD . /rc-comp
-# 执行命令
-RUN npm install && npm run build && npm install -g http-server
-# 暴露端口号
-EXPOSE 3000
-# 容器启动之后, 执行http-server 注：./build是指打包后的文件
-CMD http-server ./dist -p 3000
+# dokcerfile
+# build stage
+FROM node:lts-alpine as build-stage
+# 将工作区设为app与其他系统文件隔离
+WORKDIR /app
+COPY package*.json ./
+RUN npm config set registry https://registry.npm.taobao.org/
+RUN npm install -g npm@latest
+RUN npm install
+COPY . . 
+RUN npm run build
+
+# production stafe 
+FROM nginx:stable-alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+# 容器对外暴露端口号
+EXPOSE 80
+CMD ["nginx","-g","Daemon off;"]
